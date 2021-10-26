@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<gazebo>
+
+    <plugin name="xbot2_link_state_sensor" filename="libxbot2_gz_link_state_sensor.so">
+        <links>
+            <link name="base_link"/>
+        </links>
+    </plugin>
+    
+    <plugin name="xbot2_gz_ft_server" filename="libxbot2_gz_ft_server.so"/>
+    
+    <plugin name="xbot2_gz_imu_server" filename="libxbot2_gz_imu_server.so"/>
+    
+    <plugin name="xbot2_gz_joint_server" filename="libxbot2_gz_joint_server.so">
+        <pid>
+            <gain name="small_mot"  p="600"  d="5"/>
+            <gain name="med_mot"  p="1000"  d="10"/>
+            <gain name="bigl_mot"  p="3000"  d="20"/>
+            
+            <pid name="lf_haa_joint" profile="med_mot"/>
+            <pid name="lf_hfe_joint" profile="med_mot"/>
+            <pid name="lf_kfe_joint" profile="small_mot"/>
+            <pid name="rf_haa_joint" profile="med_mot"/>
+            <pid name="rf_hfe_joint" profile="med_mot"/>
+            <pid name="rf_kfe_joint" profile="small_mot"/>
+            <pid name="lh_haa_joint" profile="med_mot"/>
+            <pid name="lh_hfe_joint" profile="med_mot"/>
+            <pid name="lh_kfe_joint" profile="small_mot"/>
+            <pid name="rh_haa_joint" profile="med_mot"/>
+            <pid name="rh_hfe_joint" profile="med_mot"/>
+            <pid name="rh_kfe_joint" profile="small_mot"/>
+        </pid>
+    </plugin>
+
+</gazebo>
+
+</robot>
+
