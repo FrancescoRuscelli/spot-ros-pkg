@@ -67,8 +67,8 @@
     <!-- foot -->
     <xacro:property name="foot_mass" value="0.06"/>
     <xacro:property name="foot_radius" value="0.03"/>
-    <xacro:property name="foot_x" value="-0.01"/>
-    <xacro:property name="foot_z" value="-0.35"/>
+    <xacro:property name="foot_x" value="-0.005"/>
+    <xacro:property name="foot_z" value="-0.348"/>
     
     <xacro:arg name="add_base_joint" default="true"/>
 
