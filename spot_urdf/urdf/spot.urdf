@@ -10,25 +10,25 @@
         <link name="base_link"/>
       </links>
     </plugin>
-    <!-- <plugin name="xbot2_gz_ft_server" filename="libxbot2_gz_ft_server.so"/> -->
+    <plugin filename="libxbot2_gz_ft_server.so" name="xbot2_gz_ft_server"/>
     <plugin filename="libxbot2_gz_imu_server.so" name="xbot2_gz_imu_server"/>
     <plugin filename="libxbot2_gz_joint_server.so" name="xbot2_gz_joint_server">
       <pid>
-        <gain d="5" name="small_mot" p="100"/>
+        <gain d="5" name="small_mot" p="600"/>
         <gain d="10" name="med_mot" p="1000"/>
         <gain d="20" name="bigl_mot" p="3000"/>
-        <pid name="lf_haa_joint" profile="bigl_mot"/>
-        <pid name="lf_hfe_joint" profile="bigl_mot"/>
-        <pid name="lf_kfe_joint" profile="bigl_mot"/>
-        <pid name="rf_haa_joint" profile="bigl_mot"/>
-        <pid name="rf_hfe_joint" profile="bigl_mot"/>
-        <pid name="rf_kfe_joint" profile="bigl_mot"/>
-        <pid name="lh_haa_joint" profile="bigl_mot"/>
-        <pid name="lh_hfe_joint" profile="bigl_mot"/>
-        <pid name="lh_kfe_joint" profile="bigl_mot"/>
-        <pid name="rh_haa_joint" profile="bigl_mot"/>
-        <pid name="rh_hfe_joint" profile="bigl_mot"/>
-        <pid name="rh_kfe_joint" profile="bigl_mot"/>
+        <pid name="lf_haa_joint" profile="med_mot"/>
+        <pid name="lf_hfe_joint" profile="med_mot"/>
+        <pid name="lf_kfe_joint" profile="small_mot"/>
+        <pid name="rf_haa_joint" profile="med_mot"/>
+        <pid name="rf_hfe_joint" profile="med_mot"/>
+        <pid name="rf_kfe_joint" profile="small_mot"/>
+        <pid name="lh_haa_joint" profile="med_mot"/>
+        <pid name="lh_hfe_joint" profile="med_mot"/>
+        <pid name="lh_kfe_joint" profile="small_mot"/>
+        <pid name="rh_haa_joint" profile="med_mot"/>
+        <pid name="rh_hfe_joint" profile="med_mot"/>
+        <pid name="rh_kfe_joint" profile="small_mot"/>
       </pid>
     </plugin>
   </gazebo>
