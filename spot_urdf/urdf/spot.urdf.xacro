@@ -11,6 +11,8 @@
     <xacro:include filename="$(find spot_urdf)/urdf/leg.transmission.xacro"/>
     <xacro:include filename="$(find spot_urdf)/urdf/leg.gazebo.xacro"/>
     
+    <xacro:arg name="spot_gazebo" default="false"/>
+    
     <xacro:if value="$(arg spot_gazebo)">
            <xacro:include filename="$(find spot_gazebo)/xbot_control.gazebo.xacro"/>
     </xacro:if>
