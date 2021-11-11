@@ -211,7 +211,9 @@
         <geometry>
             <sphere radius="${foot_radius-0.01}"/>
         </geometry>
-        <material name="green"/>
+        <material name="green">
+            <color rgba="0.0 0.8 0.0 1.0"/>
+        </material>
     </visual>
     <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -320,7 +322,9 @@
         <geometry>
             <sphere radius="${foot_radius-0.01}"/>
         </geometry>
-        <material name="green"/>
+        <material name="green">
+            <color rgba="0.0 0.8 0.0 1.0"/>
+        </material>
     </visual>
     <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -429,7 +433,9 @@
         <geometry>
             <sphere radius="${foot_radius-0.01}"/>
         </geometry>
-        <material name="green"/>
+        <material name="green">
+            <color rgba="0.0 0.8 0.0 1.0"/>
+        </material>
     </visual>
     <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -538,7 +544,9 @@
         <geometry>
             <sphere radius="${foot_radius-0.01}"/>
         </geometry>
-        <material name="green"/>
+        <material name="green">
+            <color rgba="0.0 0.8 0.0 1.0"/>
+        </material>
     </visual>
     <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
