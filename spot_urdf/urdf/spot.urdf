@@ -14,8 +14,8 @@
     <plugin filename="libxbot2_gz_imu_server.so" name="xbot2_gz_imu_server"/>
     <plugin filename="libxbot2_gz_joint_server.so" name="xbot2_gz_joint_server">
       <pid>
-        <gain d="5" name="small_mot" p="600"/>
-        <gain d="10" name="med_mot" p="1000"/>
+        <gain d="5" name="small_mot" p="700"/>
+        <gain d="10" name="med_mot" p="1500"/>
         <gain d="20" name="bigl_mot" p="3000"/>
         <pid name="lf_haa_joint" profile="med_mot"/>
         <pid name="lf_hfe_joint" profile="med_mot"/>
@@ -141,7 +141,7 @@
     <limit effort="1000" lower="-2.7929" upper="-0.254801" velocity="1000.00"/>
   </joint>
   <joint name="lf_foot_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.01 0.0 -0.35"/>
+    <origin rpy="0 0 0" xyz="-0.005 0.0 -0.348"/>
     <parent link="lf_lowerleg"/>
     <child link="lf_foot"/>
   </joint>
@@ -151,7 +151,9 @@
       <geometry>
         <sphere radius="0.019999999999999997"/>
       </geometry>
-      <material name="green"/>
+      <material name="green">
+        <color rgba="0.0 0.8 0.0 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -237,7 +239,7 @@
     <limit effort="1000" lower="-2.7929" upper="-0.247563" velocity="1000.00"/>
   </joint>
   <joint name="rf_foot_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.01 0.0 -0.35"/>
+    <origin rpy="0 0 0" xyz="-0.005 0.0 -0.348"/>
     <parent link="rf_lowerleg"/>
     <child link="rf_foot"/>
   </joint>
@@ -247,7 +249,9 @@
       <geometry>
         <sphere radius="0.019999999999999997"/>
       </geometry>
-      <material name="green"/>
+      <material name="green">
+        <color rgba="0.0 0.8 0.0 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -333,7 +337,7 @@
     <limit effort="1000" lower="-2.7929" upper="-0.267153" velocity="1000.00"/>
   </joint>
   <joint name="lh_foot_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.01 0.0 -0.35"/>
+    <origin rpy="0 0 0" xyz="-0.005 0.0 -0.348"/>
     <parent link="lh_lowerleg"/>
     <child link="lh_foot"/>
   </joint>
@@ -343,7 +347,9 @@
       <geometry>
         <sphere radius="0.019999999999999997"/>
       </geometry>
-      <material name="green"/>
+      <material name="green">
+        <color rgba="0.0 0.8 0.0 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -429,7 +435,7 @@
     <limit effort="1000" lower="-2.7929" upper="-0.257725" velocity="1000.00"/>
   </joint>
   <joint name="rh_foot_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.01 0.0 -0.35"/>
+    <origin rpy="0 0 0" xyz="-0.005 0.0 -0.348"/>
     <parent link="rh_lowerleg"/>
     <child link="rh_foot"/>
   </joint>
@@ -439,7 +445,9 @@
       <geometry>
         <sphere radius="0.019999999999999997"/>
       </geometry>
-      <material name="green"/>
+      <material name="green">
+        <color rgba="0.0 0.8 0.0 1.0"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
