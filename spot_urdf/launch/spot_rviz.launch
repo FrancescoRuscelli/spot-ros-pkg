@@ -11,7 +11,7 @@
   </node>
 
 
-  <node name="rviz" pkg="rviz" type="rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find spot_urdf)/launch/spot.rviz" />
 
 </launch>
 

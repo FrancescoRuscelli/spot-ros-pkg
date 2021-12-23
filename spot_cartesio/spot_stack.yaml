@@ -1,0 +1,48 @@
+solver_options:
+  back_end: qpoases
+  regularizatio: 1e-5
+
+stack:
+  - [lf_foot, rf_foot, lh_foot, rh_foot, com]
+  - [waist_rot]
+
+constraints:
+  - jlim
+  - vlim
+
+lf_foot:
+  type: Cartesian
+  distal_link: lf_foot
+  indices: [0, 1, 2]
+
+rf_foot:
+  type: Cartesian
+  distal_link: rf_foot
+  indices: [0, 1, 2]
+
+lh_foot:
+  type: Cartesian
+  distal_link: lh_foot
+  indices: [0, 1, 2]
+
+rh_foot:
+  type: Cartesian
+  distal_link: rh_foot
+  indices: [0, 1, 2]
+
+com:
+  type: Com
+  lambda: 0.1
+
+waist_rot:
+  type: Cartesian
+  lambda: 0.1
+  distal_link: base_link
+  indices: [3, 4, 5]
+
+jlim:
+  type: JointLimits
+
+vlim:
+  type: VelocityLimits
+  
