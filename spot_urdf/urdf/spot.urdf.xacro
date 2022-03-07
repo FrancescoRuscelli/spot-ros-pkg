@@ -68,7 +68,7 @@
 
     <!-- foot -->
     <xacro:property name="foot_mass" value="0.06"/>
-    <xacro:property name="foot_radius" value="0.03"/>
+    <xacro:property name="foot_radius" value="0.02"/>
     <xacro:property name="foot_x" value="-0.005"/>
     <xacro:property name="foot_z" value="-0.348"/>
     
@@ -201,7 +201,7 @@
         <limit effort="1000" velocity="1000.00" lower="-2.7929" upper="-0.254801" />
     </joint>
     <joint name="lf_foot_joint" type="fixed">
-        <origin xyz="${foot_x} 0.0 ${foot_z}" rpy="0 0 0" />
+        <origin xyz="${foot_x} 0.0 ${foot_z-foot_radius}" rpy="0 0 0" />
         <parent link="lf_lowerleg" />
         <child link="lf_foot" />
     </joint>
@@ -209,18 +209,12 @@
     <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-            <sphere radius="${foot_radius-0.01}"/>
+            <sphere radius="${0.01}"/>
         </geometry>
         <material name="green">
             <color rgba="0.0 0.8 0.0 1.0"/>
         </material>
     </visual>
-    <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-            <sphere radius="${foot_radius}"/>
-        </geometry>
-    </collision>
     <inertial>
         <mass value="${foot_mass}"/>
         <inertia
@@ -312,7 +306,7 @@
         <limit effort="1000" velocity="1000.00" lower="-2.7929" upper="-0.247563" />
     </joint>
     <joint name="rf_foot_joint" type="fixed">
-        <origin xyz="${foot_x} 0.0 ${foot_z}" rpy="0 0 0" />
+        <origin xyz="${foot_x} 0.0 ${foot_z-foot_radius}" rpy="0 0 0" />
         <parent link="rf_lowerleg" />
         <child link="rf_foot" />
     </joint>
@@ -320,18 +314,12 @@
     <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-            <sphere radius="${foot_radius-0.01}"/>
+            <sphere radius="${0.01}"/>
         </geometry>
         <material name="green">
             <color rgba="0.0 0.8 0.0 1.0"/>
         </material>
     </visual>
-    <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-            <sphere radius="${foot_radius}"/>
-        </geometry>
-    </collision>
     <inertial>
         <mass value="${foot_mass}"/>
         <inertia
@@ -423,7 +411,7 @@
         <limit effort="1000" velocity="1000.00" lower="-2.7929" upper="-0.267153" />
     </joint>
     <joint name="lh_foot_joint" type="fixed">
-        <origin xyz="${foot_x} 0.0 ${foot_z}" rpy="0 0 0" />
+        <origin xyz="${foot_x} 0.0 ${foot_z-foot_radius}" rpy="0 0 0" />
         <parent link="lh_lowerleg" />
         <child link="lh_foot" />
     </joint>
@@ -431,18 +419,12 @@
     <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-            <sphere radius="${foot_radius-0.01}"/>
+            <sphere radius="${0.01}"/>
         </geometry>
         <material name="green">
             <color rgba="0.0 0.8 0.0 1.0"/>
         </material>
     </visual>
-    <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-            <sphere radius="${foot_radius}"/>
-        </geometry>
-    </collision>
     <inertial>
         <mass value="${foot_mass}"/>
         <inertia
@@ -534,7 +516,7 @@
         <limit effort="1000" velocity="1000.00" lower="-2.7929" upper="-0.257725" />
     </joint>
     <joint name="rh_foot_joint" type="fixed">
-        <origin xyz="${foot_x} 0.0 ${foot_z}" rpy="0 0 0" />
+        <origin xyz="${foot_x} 0.0 ${foot_z-foot_radius}" rpy="0 0 0" />
         <parent link="rh_lowerleg" />
         <child link="rh_foot" />
     </joint>
@@ -542,18 +524,12 @@
     <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-            <sphere radius="${foot_radius-0.01}"/>
+            <sphere radius="${0.01}"/>
         </geometry>
         <material name="green">
             <color rgba="0.0 0.8 0.0 1.0"/>
         </material>
     </visual>
-    <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-            <sphere radius="${foot_radius}"/>
-        </geometry>
-    </collision>
     <inertial>
         <mass value="${foot_mass}"/>
         <inertia
